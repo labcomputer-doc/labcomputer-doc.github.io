@@ -1,0 +1,4 @@
+What`s  a Jupyter Notebook?
+############################
+
+A Jupyter notebook is a specific filetype which integrates code and its output into a single document that enables combining visualizations, narrative text, mathematical equations, and other rich media. It means that the notebook may consist of cells, which can either store one or more lines of code or/and  formatted text. Running a cell evaluates the piece of code in the cell via the active kernel session. After the calculation is done, you may see its output. Descriptive text and the combination of communicating back and forth with a kernel make this form of a document very attractive.

@@ -1,0 +1,168 @@
+
+
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Customize Student Versіon wіth Specіal Syntax &#8212; Lab.computer  documentation</title>
+    <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Turning Exercises Notebook into an auto-graded work of art" href="turningExercisesNotebook.html" />
+    <link rel="prev" title="Assign Point Values" href="assignPointValues.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="turningExercisesNotebook.html" title="Turning Exercises Notebook into an auto-graded work of art"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="assignPointValues.html" title="Assign Point Values"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Lab.computer  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="teaching.html" accesskey="U">Teaching</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="assignPointValues.html"
+                        title="previous chapter">Assign Point Values</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="turningExercisesNotebook.html"
+                        title="next chapter">Turning Exercises Notebook into an auto-graded work of art</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/customizeStudeVersion.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="customize-student-verson-wth-specal-syntax">
+<h1>Customize Student Versіon wіth Specіal Syntax<a class="headerlink" href="#customize-student-verson-wth-specal-syntax" title="Permalink to this headline">¶</a></h1>
+<p>Nbgrader needs special syntax located within the assignment cells to create the student version of the Notebook. Selecting <strong>Autograded Answer cells</strong> indicates nbgrader about cells  that contain the answers which will be auto-graded.</p>
+<p>Here is an example of an auto-graded answer cell:</p>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">squares</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Compute the squares of numbers from 1 to n, such that the</span>
+<span class="sd">    ith element of the returned list equals i^2.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1">### BEGIN SOLUTION</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;n must be greater than or equal to 1&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">i</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span>
+    <span class="c1">### END SOLUTION</span>
+</pre></div>
+</td></tr></table></div>
+<p>Before releasing the assignment, you must hide answers from students. For hiding the solutions, a special syntax  can be specified such as <strong>### BEGIN SOLUTION</strong> and <strong>### END SOLUTION</strong>.</p>
+<p>By default, nbgrader generate_assignment will replace code between the commented BEGIN SOLUTION and END SOLUTION region with a code stub:</p>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># YOUR CODE HERE</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span>
+</pre></div>
+</td></tr></table></div>
+<p>Make sure you use the correct code comments for the programming language in use by your Jupyter Notebook kernel. For example:</p>
+<p><strong>###</strong> for Python</p>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">bar</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Prints `bar`.&quot;&quot;&quot;</span>
+    <span class="c1">### BEGIN SOLUTION</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">bar</span><span class="p">)</span>
+    <span class="c1">### END SOLUTION</span>
+</pre></div>
+</td></tr></table></div>
+<p>and <strong>//</strong> for Javascript</p>
+<div class="highlight-Javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">foo</span> <span class="p">(</span><span class="nx">bar</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// BEGIN SOLUTION</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">bar</span><span class="p">);</span>
+    <span class="c1">// END SOLUTION</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>If you don’t add comments for the solution region, then the nbgrader will replace all cell contents with <strong>YOUR ANSWER HERE</strong>.
+You may hide some or all tests placed within the Autograder tests cells. For this case, the syntax <strong>BEGIN HIDDEN TESTS</strong> and <strong>END HIDDEN TESTS</strong> can be used
+Partially hidden tests are useful for when the instructor would like to provide the student with some tests to validate their answer but hide other tests that may offer a clue to how to structure the solution.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="turningExercisesNotebook.html" title="Turning Exercises Notebook into an auto-graded work of art"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="assignPointValues.html" title="Assign Point Values"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Lab.computer  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="teaching.html" >Teaching</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Kalhin.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>
