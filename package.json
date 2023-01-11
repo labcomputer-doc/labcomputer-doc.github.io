@@ -10,6 +10,6 @@
   "author": "kalhin",
   "license": "ISC",
   "dependencies": {
-    "express": "~4.10.2"
+    "express": "~4.18.2"
   }
 }
